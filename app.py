@@ -79,7 +79,7 @@ if selected == "About":
     with st.container():
         left_column, right_column = st.columns((5,3))
         with left_column:
-            st.header("About Spam Mail Dectector")
+            st.header("About Spam Mail Detector")
             st.write('<div style="text-align: justify;font-size:18px;">Nowaday, emails are used in almost every field, from business to education. Emails have two subcategories, i.e., ham and spam. Email spam, also called junk emails or unwanted emails, is a type of email that can be used to harm any user by wasting his/her time, computing resources, and stealing valuable information. The ratio of spam emails is increasing rapidly day by day. Spam detection and filtration are significant and enormous problems for email and IoT service providers nowadays. Among all the techniques developed for detecting and preventing spam, filtering email is one of the most essential and prominent approaches.As a project i am creating a ML Model which can classify spam and ham mails</div>', unsafe_allow_html=True)
             st.write("##")
             st.write('<div style="text-align: justify;font-size:18px;">The Following are the main process for creating a spam mail detector</div>', unsafe_allow_html=True)
