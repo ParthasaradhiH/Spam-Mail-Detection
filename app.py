@@ -4,7 +4,7 @@ import pickle
 import string
 import requests
 from nltk.corpus import stopwords
-from streamlit_lottie import st_lottie
+# from streamlit_lottie import st_lottie
 from streamlit_option_menu import option_menu
 import nltk
 from nltk.stem.porter import PorterStemmer
@@ -13,14 +13,13 @@ ps = PorterStemmer()
 st.set_page_config(page_title="Spam Mail Detector",page_icon='images/favicon.png',layout="wide")
 
 #to add giff
-def load_lottieurl(url):
-    r=requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
+# def load_lottieurl(url):
+#     r=requests.get(url)
+#     if r.status_code != 200:
+#         return None
+#     return r.json()
 
-mail_lottie = load_lottieurl("https://assets10.lottiefiles.com/packages/lf20_wbhpdrhp.json")
-thank_mail=load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_zI9tjKnlQO.json")
+# mail_lottie = load_lottieurl("https://assets10.lottiefiles.com/packages/lf20_wbhpdrhp.json")
 
 #Slide bar
 with st.sidebar:
@@ -77,7 +76,7 @@ if selected == "Home":
 
 if selected == "About":
     with st.container():
-        left_column, right_column = st.columns((5,3))
+        left_column, right_column = st.columns((5,1))
         with left_column:
             st.header("About Spam Mail Detector")
             st.write('<div style="text-align: justify;font-size:18px;">Nowaday, emails are used in almost every field, from business to education. Emails have two subcategories, i.e., ham and spam. Email spam, also called junk emails or unwanted emails, is a type of email that can be used to harm any user by wasting his/her time, computing resources, and stealing valuable information. The ratio of spam emails is increasing rapidly day by day. Spam detection and filtration are significant and enormous problems for email and IoT service providers nowadays. Among all the techniques developed for detecting and preventing spam, filtering email is one of the most essential and prominent approaches.As a project i am creating a ML Model which can classify spam and ham mails</div>', unsafe_allow_html=True)
@@ -92,8 +91,9 @@ if selected == "About":
                                 <li>Deployment</li>
                             </ul>
                         </div>''', unsafe_allow_html=True)
-        with right_column:
-            st_lottie(mail_lottie, height=500, key="jobseeking")   
+        # with right_column:
+        #     st_lottie(mail_lottie, height=500, key="jobseeking")   
+
 if selected == "Contact":
     st.title(f"Connect With Me") 
     st.write("##")
